@@ -1,0 +1,86 @@
+body {
+  height: 100dvh;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  font-family: "Noto Sans Tangsa";
+}
+
+main {
+  padding: 2em;
+  height: 100%;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.5em;
+  padding: 1em;
+}
+
+.title-text-sub {
+  font-size: 0.5em;
+  font-weight: 300;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+label sub {
+  color: #ea906c;
+  padding-left: 0.5em;
+}
+
+input {
+  background-color: transparent;
+  padding: 0.2em;
+  border-bottom: 1px solid white;
+  color: white;
+  transition-duration: 0.3s;
+}
+
+input:focus {
+  background-color: white;
+  color: black;
+  transition-duration: 0.3s;
+  border-radius: 0.2em 0.2em 0 0;
+}
+
+button {
+  padding: 0.6em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  color: #ea906c;
+  background-color: transparent;
+  border: 1px solid white;
+  font-weight: 550;
+}
+
+.field,
+button,
+input {
+  font-size: 1.2em;
+}
+
+@media screen and (max-width: 750px) {
+  form {
+    padding: 1em;
+    flex-direction: column;
+  }
+
+  .field {
+    width: 100%;
+  }
+
+  .field,
+  button {
+    margin-top: 2em;
+  }
+}
