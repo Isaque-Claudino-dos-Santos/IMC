@@ -1,3 +1,5 @@
+@import "./scrollbar.css";
+
 body {
   height: 100dvh;
   background-color: var(--bg-color);
@@ -34,7 +36,7 @@ form {
 }
 
 label sub {
-  color: #ea906c;
+  color: var(--sec-font-color);
   padding-left: 0.5em;
 }
 
@@ -57,10 +59,16 @@ button {
   padding: 0.6em;
   border-radius: 0.5em;
   cursor: pointer;
-  color: #ea906c;
+  color: var(--sec-font-color);
   background-color: transparent;
   border: 1px solid white;
   font-weight: 550;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: white;
+  transition: 0.3s;
 }
 
 .field,
