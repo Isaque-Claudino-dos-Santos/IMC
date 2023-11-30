@@ -16,7 +16,7 @@ new Field()
 
 const weightField = new Field()
   .id("weight")
-  .label("Weight<sub>km</sub>")
+  .label("Weight<sub>kg</sub>")
   .inputProps({
     placeholder: "89.2",
     autocomplete: "off",
