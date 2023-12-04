@@ -2,5 +2,5 @@
  * Calculation IMC
  */
 Object.defineProperty(Math, "imc", {
-  value: (weight, height) => weight / height ** 2,
+  value: (weight, height) => Number(weight) / Number(height) ** 2,
 });
