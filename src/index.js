@@ -1,3 +1,4 @@
+import "./Math.js";
 import Field from "./Field.js";
 import Button from "./Button.js";
 
@@ -5,7 +6,7 @@ const form = document.querySelector("form");
 
 form.onsubmit = (e) => e.preventDefault();
 
-new Field()
+const heightField = new Field()
   .id("height")
   .label("Height<sub>cm</sub>")
   .inputProps({
@@ -23,4 +24,14 @@ const weightField = new Field()
   })
   .appendIn(form);
 
-new Button().text("Calculate").appendIn(form);
+new Button()
+  .text("Calculate")
+  .onClick(() => {
+    const imc = Math.imc(
+      heightField.getInputValue(),
+      weightField.getInputValue()
+    );
+
+    document.querySelector(".output").textContent = imc;
+  })
+  .appendIn(form);

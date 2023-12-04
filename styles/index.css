@@ -77,6 +77,10 @@ input {
   font-size: 1.2em;
 }
 
+.response {
+  color: var(--tre-font-color);
+}
+
 @media screen and (max-width: 750px) {
   form {
     padding: 1em;

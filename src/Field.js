@@ -14,6 +14,7 @@ export default class Field {
   constructor() {
     this[fSetup]();
     this.appendIn = this.appendIn.bind(this);
+    this.onInput = this.onInput.bind(this);
   }
 
   [fDefineClassNames]() {
@@ -37,6 +38,18 @@ export default class Field {
     this[fAppendChildsInContainer]();
   }
 
+  getInput() {
+    return this[kInput];
+  }
+
+  getInputValue() {
+    return this[kInput].value;
+  }
+
+  getLabel() {
+    return this[kLabel];
+  }
+
   label(innerHTML) {
     this[kLabel].innerHTML = innerHTML;
     return this;
@@ -53,12 +66,13 @@ export default class Field {
     return this;
   }
 
+  onInput(callback) {
+    this[kInput].addEventListener("keydown", (event) => callback(event));
+    return this;
+  }
+
   appendIn(element) {
     element.appendChild(this[kContainer]);
-
-    return {
-      label: this[kLabel],
-      input: this[kInput],
-    };
+    return this;
   }
 }
