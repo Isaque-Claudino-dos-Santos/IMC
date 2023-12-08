@@ -28,8 +28,8 @@ new Button()
   .text("Calculate")
   .onClick(() => {
     const imc = Math.imc(
-      heightField.getInputValue(),
-      weightField.getInputValue()
+      weightField.getInputValue(),
+      heightField.getInputValue()
     );
 
     document.querySelector(".output").textContent = imc;
